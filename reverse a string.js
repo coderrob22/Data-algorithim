@@ -6,4 +6,8 @@ function reverseString(str) {
     return newStr;
   }
   
+  or 
   
+function revString(str){
+    return str.split('').reverse().join('')
+} 
