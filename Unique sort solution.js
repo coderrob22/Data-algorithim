@@ -2,9 +2,9 @@
 
 const uniqSort = function(arr){
     const breadcrumbs ={};
-    const result = [arr[0]];
+    const result = [];
 
-    for (let i =1; i< arr.length; i++){   //start loop at 1 because element at 0 index cannot be a duplicate
+    for (let i =0; i< arr.length; i++){   
         if (!breadcrumbs[arr[i]]){
             result.push(arr[i]);
             breadcrumbs[arr[i]]= true;
@@ -14,3 +14,5 @@ const uniqSort = function(arr){
 }
 
 uniqSort([4,2,2,3,2,2,2]) // => [2,3,4]
+
+//this algo speeds up our time complexity but the trade off is it uses more space. Space is O(n). With each element cached, the space gets used linearly.
